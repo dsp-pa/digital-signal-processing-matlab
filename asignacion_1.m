@@ -1,0 +1,1 @@
+% Tarea 1# Comentariosn = 0:25;x1 = sin(pi/17 * n)stem(n, x1)

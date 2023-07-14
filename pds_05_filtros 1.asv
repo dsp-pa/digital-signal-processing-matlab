@@ -1,0 +1,151 @@
+%% Generación de un audio de 3 tonos: 4k, 9k y 16 k
+clc
+close all
+clear
+
+% 1. Parámetros de muestreo:
+
+fs = 44000;
+ts = 1/fs;
+
+% Tiempo total de la muestra
+T = 0.5;
+
+t = 0:ts:T;
+s =  cos(4e3.*2 .*pi.*t) + cos(9e3.*2 .*pi.*t) + cos(16e3.*2 .*pi.*t);
+
+% Visualización del espectro de la señal original
+
+N = length (s);
+S = fft(s) / N;
+S = fftshift(S);
+df = 1 / T;
+
+
+figure
+f = (-N/2:N/2-1)*df;
+plot(f, abs(S))
+title("Espectro S(f) - 4, 9 y 16 kHz")
+
+% Reproducción del audio sin filtrar: 3 segundos
+soundsc(s, fs)
+
+
+%% Visualización de la respuesta en frecuencia (filtro pasabanda - de 8 a 12 kHZ)
+
+[b, a] = butter(3, [8000/(fs/2) 12000/(fs/2)], "bandpass");
+
+figure
+freqz(b, a, [], fs)
+
+% Señal filtrada y espectro de la señal señal filtrada
+filtered = filter(b, a, s);
+
+N = length (filtered);
+S = fft(filtered) / N;
+S = fftshift(S);
+df = 1 / T;
+
+figure
+f = (-N/2:N/2-1)*df;
+plot(f, abs(S))
+title("Espectro S(f) ")
+
+soundsc(filtered, fs)
+spectrogram(filtered, [], [], [], fs, "yaxis")
+
+
+
+%% Visualización de la respuesta en frecuencia (filtro pasabaja de 6kHz)
+
+[b, a] = butter(6, 6000/(fs/2));
+
+figure
+freqz(b, a, [], fs)
+
+% Señal filtrada y espectro de la señal señal filtrada
+filtered = filter(b, a, s);
+
+N = length (filtered);
+S = fft(filtered) / N;
+S = fftshift(S);
+df = 1 / T;
+
+figure
+f = (-N/2:N/2-1)*df;
+plot(f, abs(S))
+title("Espectro S(f) , pasabajas 6k")
+
+sound(filtered, fs)
+
+%% Visualización de la respuesta en frecuencia (filtro pasaalta de 12kHz)
+
+[b, a] = butter(6, 12000/(fs/2), "high");
+
+figure
+freqz(b, a, [], fs)
+
+% Señal filtrada y espectro de la señal señal filtrada
+filtered = filter(b, a, s);
+
+N = length (filtered);
+S = fft(filtered) / N;
+S = fftshift(S);
+df = 1 / T;
+
+figure
+f = (-N/2:N/2-1)*df;
+plot(f, abs(S))
+title("Espectro S(f) , pasabajas 6k")
+
+
+spectrogram(s, [], [], [], fs, "yaxis")
+sound(filtered, fs)
+
+
+%% Espectrograma de una señal de audio cargada
+
+clc
+clear
+close all
+[s_stereo, Fs] = audioread("corrupted.m4a");
+s = s_stereo(:,1);
+
+figure
+spectrogram(s,[],[],[],Fs,'yaxis')
+
+N = length (s);
+S = fft(s) / N;
+S = fftshift(S);
+
+figure
+f = linspace(-Fs/2, Fs/2, N);
+plot(f, 20*log10(abs(S)))
+title("Espectro S(f) , pasabajas 6k")
+%soundsc(s, Fs)
+
+[b, a] = butter(3, [900/(Fs/2) 1100/(Fs/2) ], "stop");
+filtered = filter(b, a, s);
+
+[b, a] = butter(3, [1900/(Fs/2) 2100/(Fs/2) ], "stop");
+filtered = filter(b, a, filtered);
+
+[b, a] = butter(3, 500/(Fs/2) , "low");
+filtered = filter(b, a, filtered);
+
+figure
+spectrogram(filtered,[],[],[],Fs,'yaxis')
+
+
+N = length (filtered);
+S = fft(filtered) / N;
+S = fftshift(S);
+
+figure
+f = linspace(-Fs/2, Fs/2, N);
+plot(f, 20*log10(abs(S)))
+title("Espectro S(f) , pasabajas 6k")
+
+soundsc(s, Fs)
+pause
+soundsc(filtered, Fs)

@@ -1,0 +1,1 @@
+% Calcular las coeficientes de Fourier de una serie periódicax_1 = zeros(1, 100);x_2 = ones(1, 100);x = [x_1, x_2];plot(x)% stem(x, f)N = 2000;x = [0:100]/100;f = ones(1,101)*1/2;for i = 1:2:N  a = 2/pi/i;  f = f+ a*sin(2*pi*i*x);end% plot(x,f)

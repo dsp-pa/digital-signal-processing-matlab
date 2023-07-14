@@ -1,0 +1,230 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8106,        222]
+NotebookOptionsPosition[      6690,        195]
+NotebookOutlinePosition[      7049,        211]
+CellTagsIndexPosition[      7006,        208]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"FourierTransform", "[", 
+  RowBox[{"5", ",", " ", "t", ",", " ", "\[Omega]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.748447850362318*^9, 3.748447903083374*^9}, 
+   3.748447960011718*^9, {3.7484481935761623`*^9, 3.748448198326022*^9}, {
+   3.7484482649265547`*^9, 3.748448273741432*^9}, {3.7484483164428797`*^9, 
+   3.7484483691939573`*^9}, {3.748448409449664*^9, 3.748448411639648*^9}, {
+   3.7484484619137707`*^9, 3.748448493858169*^9}, {3.748448607980122*^9, 
+   3.748448612428198*^9}, {3.748448727805088*^9, 3.748448749419467*^9}, {
+   3.7484489524834633`*^9, 3.7484489632908287`*^9}, 3.748451583933703*^9},
+ FontFamily->"Fira Code",
+ FontSize->16,
+ FontWeight->"Bold",ExpressionUUID->"92fcb805-4189-4001-81c6-5bb54e948a5f"],
+
+Cell[BoxData[
+ RowBox[{"FourierTransform", "[", 
+  RowBox[{
+   RowBox[{"2", "*", 
+    RowBox[{"Cos", "[", 
+     RowBox[{
+      RowBox[{"2", "\[Pi]", " ", "t"}], " ", "-", " ", 
+      RowBox[{"\[Pi]", "/", "2"}]}], "]"}]}], ",", " ", "t", ",", " ", 
+   "\[Omega]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.748451591837804*^9, 3.7484516289806957`*^9}, {
+  3.74845166958298*^9, 3.7484516864679937`*^9}},
+ FontFamily->"Fira Code",
+ FontSize->16,
+ FontWeight->"Bold",ExpressionUUID->"a88645d0-552c-44f1-9cc1-2417e4080e40"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.748448838176443*^9, 3.748448840000679*^9}, 
+   3.74845174123081*^9},
+ FontFamily->"Fira Code",
+ FontSize->16,
+ FontWeight->"Bold",ExpressionUUID->"42b5a670-9d04-4a5c-a144-6efa09e2630e"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.748448624796804*^9, 3.748448842830967*^9},
+ FontFamily->"Fira Code",
+ FontSize->16,
+ FontWeight->"Bold",ExpressionUUID->"6a887992-1ea8-46cb-be63-e9f29ed18f45"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"Derivative", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       SqrtBox[
+        FractionBox["\[Pi]", "2"]], " ", 
+       RowBox[{"DiracDelta", "[", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", "\[Omega]"}], "]"}]}], "+", 
+      RowBox[{
+       SqrtBox[
+        FractionBox["\[Pi]", "2"]], " ", 
+       RowBox[{"DiracDelta", "[", 
+        RowBox[{"1", "+", "\[Omega]"}], "]"}]}]}], ",", " ", "\[Omega]"}], 
+    "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"\[Omega]", ",", " ", 
+     RowBox[{"-", "3"}], ",", " ", "3"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7484488468858213`*^9, 3.7484489075193977`*^9}, {
+  3.748448973451261*^9, 3.748449026285939*^9}, {3.7484551451136417`*^9, 
+  3.748455170354883*^9}, {3.748455304789196*^9, 3.748455306115119*^9}},
+ FontFamily->"Fira Code",
+ FontSize->16,
+ FontWeight->"Bold",ExpressionUUID->"f90b98bc-ea78-4245-82e0-8ba6fc02d615"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","ivar",
+   "\"\\!\\(\\*RowBox[{\\\"-\\\", \\\"2.9998774285714287`\\\"}]\\) is not a \
+valid variable.\"",2,33,9,30870438129934187110,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.748455171207882*^9},ExpressionUUID->"b4f3b591-30c2-4cda-b376-\
+5ca30345abec"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","ivar",
+   "\"\\!\\(\\*RowBox[{\\\"-\\\", \\\"2.9998774285714287`\\\"}]\\) is not a \
+valid variable.\"",2,33,10,30870438129934187110,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7484551712432327`*^9},ExpressionUUID->"89c5fc13-2d6c-45a5-86b7-\
+225b3dc8ac5d"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","ivar",
+   "\"\\!\\(\\*RowBox[{\\\"-\\\", \\\"2.877428448979592`\\\"}]\\) is not a \
+valid variable.\"",2,33,11,30870438129934187110,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.748455171287407*^9},ExpressionUUID->"ebcd4016-eb9d-4819-85bc-\
+7d827ec0b4ed"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"General\\\", \
+\\\"::\\\", \\\"ivar\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,33,12,30870438129934187110,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.748455171359859*^9},ExpressionUUID->"694d7994-0af3-4620-b3c7-\
+acc2081fab99"],
+
+Cell[BoxData[
+ GraphicsBox[{GraphicsComplexBox[CompressedData["
+1:eJxTTMoPSmViYGAwAmIQPQpGwSjADQD2ewHg
+    "], {}], {}, {}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, 
+     Charting`ScaledFrameTicks[{Identity, Identity}]}, {Automatic, 
+     Charting`ScaledFrameTicks[{Identity, Identity}]}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, "DefaultMeshStyle" -> 
+    AbsolutePointSize[6], "ScalingFunctions" -> None, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{-3, 3}, {0., 1.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{{3.7484551519084377`*^9, 
+  3.7484551714340487`*^9}},ExpressionUUID->"ab3c5ad5-51e7-4fe9-a637-\
+9a02466bd859"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.748447974607176*^9, 3.748447981998197*^9}, 
+   3.7484487665547028`*^9},
+ FontFamily->"Fira Code",
+ FontSize->16,
+ FontWeight->"Bold",ExpressionUUID->"7fe8c600-8377-4cbc-a80c-8781d2680778"],
+
+Cell[BoxData[
+ RowBox[{"FourierTransform", "[", 
+  RowBox[{
+   RowBox[{"3", "*", 
+    RowBox[{"Cos", "[", 
+     RowBox[{"4", "\[Pi]", " ", "t"}], "]"}]}], ",", " ", "t", ",", " ", 
+   "\[Omega]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.748452101682732*^9, 3.748452124433776*^9}},
+ FontFamily->"Fira Code",
+ FontSize->16,
+ FontWeight->"Bold",ExpressionUUID->"f608192e-7d65-406a-9144-65575e37dbe3"]
+},
+WindowSize->{1280, 755},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.2 para Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 752, 12, 50, "Input",ExpressionUUID->"92fcb805-4189-4001-81c6-5bb54e948a5f"],
+Cell[1313, 34, 517, 13, 50, "Input",ExpressionUUID->"a88645d0-552c-44f1-9cc1-2417e4080e40"],
+Cell[1833, 49, 234, 5, 33, InheritFromParent,ExpressionUUID->"42b5a670-9d04-4a5c-a144-6efa09e2630e"],
+Cell[2070, 56, 207, 4, 33, InheritFromParent,ExpressionUUID->"6a887992-1ea8-46cb-be63-e9f29ed18f45"],
+Cell[CellGroupData[{
+Cell[2302, 64, 952, 26, 80, InheritFromParent,ExpressionUUID->"f90b98bc-ea78-4245-82e0-8ba6fc02d615"],
+Cell[3257, 92, 326, 8, 24, "Message",ExpressionUUID->"b4f3b591-30c2-4cda-b376-5ca30345abec"],
+Cell[3586, 102, 329, 8, 24, "Message",ExpressionUUID->"89c5fc13-2d6c-45a5-86b7-225b3dc8ac5d"],
+Cell[3918, 112, 326, 8, 24, "Message",ExpressionUUID->"ebcd4016-eb9d-4819-85bc-7d827ec0b4ed"],
+Cell[4247, 122, 400, 9, 24, "Message",ExpressionUUID->"694d7994-0af3-4620-b3c7-acc2081fab99"],
+Cell[4650, 133, 1384, 40, 245, "Output",ExpressionUUID->"ab3c5ad5-51e7-4fe9-a637-9a02466bd859"]
+}, Open  ]],
+Cell[6049, 176, 237, 5, 33, InheritFromParent,ExpressionUUID->"7fe8c600-8377-4cbc-a80c-8781d2680778"],
+Cell[6289, 183, 397, 10, 50, "Input",ExpressionUUID->"f608192e-7d65-406a-9144-65575e37dbe3"]
+}
+]
+*)
+

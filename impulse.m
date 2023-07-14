@@ -1,0 +1,1 @@
+function [n,x] = impulse (start, finish, d)    n = start:finish;    x = zeros(size(n));    for i = 1:length(n)      if n(i) -d == 0        x(i) = 1;      endif    endforendfunction

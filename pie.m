@@ -1,0 +1,1 @@
+1;#t = linspace (-1, 1, 1000);t = [-5 :0.01: 5];x1 = t >= 0;x2 = -3 < t < 0;x3 = t <= -3;y(x1) = t(x1).^2;y(x2) = 0;y(x3) = -1;plot(t, y)figurestem(t, y)axis([-1 1 -2 2])grid on

@@ -1,0 +1,51 @@
+
+
+%% Audio de alta frecuencia
+
+clc
+close all
+clear
+
+% 1. Parámetros de muestreo:
+
+fs = 44000;
+ts = 1/fs;
+
+T = 6;
+
+
+t = 0:ts:T;
+s = cos(16e3.*2 .*pi.*t) + cos(9e3.*2 .*pi.*t);
+
+
+N = length (s);
+S = fft(s) / N;
+S = fftshift(S);
+df = 1 / T;
+
+
+figure
+f = (-N/2:N/2-1)*df;
+plot(f, abs(S))
+title("Espectro S(f) - corregido")
+
+
+[b, a] = butter(20, 20e3/fs/2);
+
+figure
+freqz(b, a, [], fs)
+
+
+filtered = filtfilt(b, a, s);
+
+
+
+N = length (filtered);
+S = fft(filtered) / N;
+S = fftshift(S);
+df = 1 / T;
+
+figure
+f = (-N/2:N/2-1)*df;
+plot(f, abs(S))
+title("Espectro S(f) - corregido")

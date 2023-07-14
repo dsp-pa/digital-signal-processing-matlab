@@ -1,0 +1,1 @@
+echo off; clear; clct = [-0.2:0.001:0.2];x1 = cos(2*pi*10*t);figure# plot(t, x1)hold on;x2 = cos (2*pi*50*t);plot(t, x1, t, x2)# axis([-0.1 0.1 -1 1])fs = 40T = 1/40figurets = [-0.2:T:0.2];x1s = cos(2*pi*10*ts);x2s = cos(2*pi*50*ts);figuretitle("S1")stem(ts, x1s)figuretitle("S1")stem(ts, x2s)
